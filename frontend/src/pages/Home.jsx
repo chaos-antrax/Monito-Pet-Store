@@ -9,6 +9,7 @@ import "swiper/css";
 
 const Home = () => {
   const [pets, setPets] = useState([]);
+  const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
     const url = "https://monitor-backend-rust.vercel.app/api/pets";
@@ -27,6 +28,23 @@ const Home = () => {
     fetchPets();
   }, []);
 
+  useEffect(() => {
+    const url = "https://monitor-backend-rust.vercel.app/api/customers";
+
+    const fetchCustomers = async () => {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        // console.log(data);
+        setCustomers(data);
+      } catch (err) {
+        console.log("error fetching customers", err);
+      }
+    };
+
+    fetchCustomers();
+  }, []);
+
   return (
     <Wrapper>
       <Header />
@@ -41,7 +59,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-2">
-            {pets.map((pet) => (
+            {pets?.map((pet) => (
               <ProductCard
                 key={pet.id}
                 image={pet.image}
@@ -58,10 +76,12 @@ const Home = () => {
           <Banner />
           <div className="mt-8">
             <span className="text-[20px] font-bold">Our Lovely Customers</span>
-            <Swiper>
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
+            <Swiper slidesPerView="1.45" freeMode={true}>
+              {customers.map((customer) => (
+                <SwiperSlide key={customer.name} className="mt-4">
+                  <img src={customer.image} alt="customer" />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

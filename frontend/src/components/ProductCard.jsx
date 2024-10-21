@@ -1,14 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ image, breed, gender, age, price }) => {
   return (
     <div className="flex flex-col p-2 m-2 bg-white rounded-xl max-w-[185px]">
-      <img
-        src={image}
-        alt="product-image"
-        loading="lazy"
-        className="object-contain w-full aspect-square rounded-xl"
-      />
+      <Link to="/details">
+        <img
+          src={image}
+          alt="product-image"
+          loading="lazy"
+          className="object-contain w-full aspect-square rounded-xl"
+        />
+      </Link>
       <div className="flex flex-col p-1 mt-2 w-full">
         <div className="flex flex-col w-full">
           <h2 className="text-sm font-bold leading-5 text-slate-900">

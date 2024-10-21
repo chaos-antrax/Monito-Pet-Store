@@ -21,7 +21,7 @@ const navbar = () => {
     { label: "CONTACT", path: "/" },
   ];
   return (
-    <div className="h-[57px] w-full justify-between items-center flex pt-[2px] pr-[14px] pl-[10px] mt-[47px] absolute">
+    <div className="sm:h-[57px] sm:pt-[2px] sm:pr-[14px] sm:pl-[10px] sm:mt-[47px] sm:absolute w-full justify-between items-center flex ">
       <Sheet>
         <SheetTrigger>
           <img src={hamIco} alt="hamburger" />
@@ -41,7 +41,9 @@ const navbar = () => {
           </div>
         </SheetContent>
       </Sheet>
-      <img src={logo} alt="logo" />
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <img src={search} alt="search" />
     </div>
   );

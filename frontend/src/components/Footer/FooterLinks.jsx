@@ -4,7 +4,7 @@ const FooterLinks = () => {
   const links = ["Home", "Category", "About", "Contact"];
 
   return (
-    <nav className="flex gap-10 items-start w-full text-base font-medium whitespace-nowrap text-slate-900">
+    <nav className="flex gap-10 items-start w-full md:w-fit text-base font-medium whitespace-nowrap text-slate-900">
       {links.map((link, index) => (
         <a
           key={index}

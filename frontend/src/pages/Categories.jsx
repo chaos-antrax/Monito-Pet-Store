@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Wrapper } from "@/components/Index";
 import Banner from "@/components/Categories/Banner";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/PetCard";
 
 const Categories = () => {
   const [dogs, setDogs] = useState([]);

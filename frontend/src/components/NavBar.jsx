@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import hamIco from "../assets/hamIco.svg";
 import logo from "../assets/logo.svg";
 import search from "../assets/search.svg";
+import coin from "../assets/coin.svg";
+import arrowd from "../assets/arrowd.svg";
 
 import {
   Sheet,
@@ -12,6 +14,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
+import { NavigationMenu } from "@radix-ui/react-navigation-menu";
+import {
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+} from "./ui/navigation-menu";
 
 const navbar = () => {
   const nav = [
@@ -21,9 +28,9 @@ const navbar = () => {
     { label: "CONTACT", path: "/" },
   ];
   return (
-    <div className="sm:h-[57px] sm:pt-[2px] sm:pr-[14px] sm:pl-[10px] sm:mt-[47px] sm:absolute w-full justify-between items-center flex ">
+    <div className="absolute h-[57px] md:h-[100px] w-full justify-between items-center flex pt-[2px] pr-[14px] pl-[10px] mt-[47px] md:mt-0 md:px-[10%] md:py-10 font-bold">
       <Sheet>
-        <SheetTrigger>
+        <SheetTrigger className="md:hidden">
           <img src={hamIco} alt="hamburger" />
         </SheetTrigger>
         <SheetContent side="left" className="bg-main-t">
@@ -44,7 +51,40 @@ const navbar = () => {
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-      <img src={search} alt="search" />
+      <div className="hidden md:block w-[366px]">
+        <div className=" justify-between items-center flex">
+          <span>Home</span>
+          <span>Categories</span>
+          <span>About</span>
+          <span>Contact</span>
+        </div>
+      </div>
+
+      <img src={search} alt="search" className="md:hidden" />
+      <div className="w-[360px] bg-white hidden md:block h-[44px] rounded-full items-center justify-center">
+        <div className="h-full w-full items-center flex relative rounded-full">
+          <img
+            src={search}
+            alt="search"
+            className="w-[20px] fill-slate-400 absolute ml-4 z-10"
+          />
+          <input
+            type="text"
+            className="w-full h-full absolute rounded-full pl-14 font-light"
+          />
+        </div>
+      </div>
+
+      <button className="hidden md:block bg-main-blue h-[44px] text-[16px] px-5 rounded-full text-white font-medium">
+        Join the Community
+      </button>
+      <div className="hidden md:block font-extralight">
+        <div className="flex">
+          <img src={coin} className="mr-2" />
+          VND
+          <img src={arrowd} className="ml-2" />
+        </div>
+      </div>
     </div>
   );
 };

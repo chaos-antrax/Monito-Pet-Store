@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BannerContent = () => {
   return (
-    <div className="px-[16px] z-10 items-center justify-center text-[#002a48]">
+    <div className="px-[16px] z-10 items-center justify-center text-[#002a48] absolute">
       <span className="text-[42px] font-bold">One More Friend</span>
       <br />
       <span className="text-[24px] font-bold">Thousands More Fun!</span>
@@ -15,8 +15,8 @@ const BannerContent = () => {
         will always be with you to have fun. We have 200+ different pets that
         can meet your needs!
       </span>
-      <div className="flex justify-center mt-6 px-4">
-        <button className="btn-secondary flex items-center justify-between">
+      <div className="flex justify-center md:justify-start mt-6 px-4 md:px-0">
+        <button className="btn-secondary flex items-center justify-between border-main-blue">
           View Intro
           <img
             src={playIco}

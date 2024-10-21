@@ -2,7 +2,6 @@ import React from "react";
 import giftIco from "../assets/gift.svg";
 
 const ItemCard = ({ name, product, price, size, description, image }) => {
-  console.log(name, product, price, size, description, image);
   return (
     <div className="flex flex-col p-2 m-2 bg-white rounded-xl max-w-[185px] md:max-w-[280px] md:h-[440px]">
       <img

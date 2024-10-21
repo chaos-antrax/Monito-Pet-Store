@@ -12,32 +12,32 @@ import whiskas from "../../../assets/sellers/whiskas.png";
 const Sellers = () => {
   const SellersList = [
     {
-      src: [bakers],
+      src: bakers,
       alt: "Seller 1",
     },
     {
-      src: [butchers],
+      src: butchers,
       alt: "Seller 2",
     },
     {
-      src: [felix],
+      src: felix,
       alt: "Seller 3",
     },
     {
-      src: [goodBoy],
+      src: goodBoy,
       alt: "Seller 4",
     },
     {
-      src: [pedigree],
-      alt: "Seller 4",
+      src: pedigree,
+      alt: "Seller 5",
     },
     {
-      src: [sheba],
-      alt: "Seller 4",
+      src: sheba,
+      alt: "Seller 6",
     },
     {
-      src: [whiskas],
-      alt: "Seller 4",
+      src: whiskas,
+      alt: "Seller 7",
     },
   ];
 
@@ -52,15 +52,14 @@ const Sellers = () => {
         </div>
         <div>
           <button className=" btn-secondary max-w-[240px] mt-2 flex items-center justify-center">
-            View all our sellers <img src={arrow} />
+            View all our sellers <img src={arrow} alt="arrow" />
           </button>
         </div>
       </div>
       <div className="flex justify-between items-center h-[120px]">
         {SellersList.map((icon, index) => (
-          <div className=" w-[150px] h-full p-5">
+          <div key={index} className="w-[150px] h-full p-5">
             <img
-              key={index}
               loading="lazy"
               src={icon.src}
               alt={icon.alt}

@@ -9,6 +9,9 @@ export default {
         "secondary-t": "#F7DBA7",
         "main-blue": "#003459",
       },
+      fontFamily: {
+        gilroy: ["Gilroy", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

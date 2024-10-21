@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ image, breed, gender, age, price }) => {
   return (
-    <div className="flex flex-col p-2 m-2 bg-white rounded-xl max-w-[185px] md:max-w-[280px] md:min-h-[378px]">
+    <div className="flex flex-col p-2 m-2 bg-white rounded-xl max-w-[185px] md:max-w-[280px] md:min-h-[340px]">
       <img
         src={image}
         alt="product-image"

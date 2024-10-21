@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Wrapper from "../components/Wrapper";
 import Header from "../components/Home/Header/Header";
-import arrow from "../assets/arrow.svg";
 import Banner from "../components/Home/Body/Banner";
 import Sellers from "@/components/Home/Body/Sellers";
 import Customers from "@/components/Home/Body/Customers";
@@ -13,7 +12,7 @@ const Home = () => {
   return (
     <Wrapper>
       <Header />
-      <div className=" text-main-blue bg-[#f6f6f6] px-4 py-8 md:px-[250px]">
+      <div className="font-gilroy text-main-blue bg-[#f6f6f6] px-4 py-8 md:px-[250px]">
         <div>
           <PetsContainer />
           <Banner />

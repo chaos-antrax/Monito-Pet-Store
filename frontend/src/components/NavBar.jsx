@@ -31,9 +31,11 @@ const navbar = () => {
     <div className="absolute h-[57px] md:h-[100px] w-full justify-between items-center flex pt-[2px] pr-[14px] pl-[10px] mt-[47px] md:mt-0 md:px-[10%] md:py-10 font-bold">
       <Sheet>
         <SheetTrigger className="md:hidden">
+          <SheetTitle className="hidden" />
           <img src={hamIco} alt="hamburger" />
         </SheetTrigger>
         <SheetContent side="left" className="bg-main-t">
+          <SheetDescription className="hidden" />
           <div className="w-full items-center justify-center flex">
             <img src={logo} alt="logo" />
           </div>
@@ -51,10 +53,14 @@ const navbar = () => {
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-      <div className="hidden md:block w-[366px]">
+      <div className="hidden md:block w-[366px] text-main-blue">
         <div className=" justify-between items-center flex">
-          <span>Home</span>
-          <span>Categories</span>
+          <Link to="/">
+            <span>Home</span>
+          </Link>
+          <Link to="/categories">
+            <span>Categories</span>
+          </Link>
           <span>About</span>
           <span>Contact</span>
         </div>

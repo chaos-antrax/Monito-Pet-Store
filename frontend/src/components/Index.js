@@ -1,7 +1,8 @@
 import NotFound from "./NotFound";
 import Wrapper from "./Wrapper";
-import Header from "./Header";
-import Footer from "./Footer";
-import Banner from "./Banner";
+import Header from "./Home/Header/Header";
+import Footer from "./Footer/Footer";
+import Banner from "./BannerContent";
+import Navbar from "./NavBar";
 
-export { NotFound, Wrapper, Header, Footer, Banner };
+export { NotFound, Wrapper, Header, Navbar, Footer, Banner };

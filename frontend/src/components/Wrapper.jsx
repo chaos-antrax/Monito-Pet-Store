@@ -1,10 +1,10 @@
 import React from "react";
-import { Header, Footer } from "./Index";
+import { Navbar, Footer } from "./Index";
 
 const Wrapper = (props) => {
   return (
     <div>
-      <Header />
+      <Navbar />
       <div>{props.children}</div>
       <Footer />
     </div>

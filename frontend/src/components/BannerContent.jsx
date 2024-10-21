@@ -15,7 +15,7 @@ const BannerContent = () => {
         will always be with you to have fun. We have 200+ different pets that
         can meet your needs!
       </span>
-      <div className="flex justify-center md:justify-start mt-6 px-4 md:px-0">
+      <div className="flex justify-center md:justify-start mt-6">
         <button className="btn-secondary flex items-center justify-between border-main-blue">
           View Intro
           <img

@@ -19,7 +19,7 @@ const BannerText = () => {
           View Intro
           <img
             src={playIco}
-            className="ml-3 border-[1.5px] border-main-blue rounded-full"
+            className="ml-1 border-[1.5px] border-main-blue rounded-full"
           />
         </button>
         <button className="btn-primary ml-4">Explore Now</button>
